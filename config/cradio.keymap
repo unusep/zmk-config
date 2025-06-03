@@ -85,7 +85,7 @@
         compatible = "zmk,combos";
 
         magic {
-            bindings = <&mo 5>;
+            bindings = <&mo 4>;
             key-positions = <30 31>;
         };
     };
@@ -103,7 +103,7 @@
 &kp Q        &kp W       &kp E       &kp R         &kp T        &kp Y        &kp U        &kp I       &kp O       &kp SEMICOLON
 &ht LCTRL A  &ht LALT S  &ht LGUI D  &ht LSHIFT F  &kp G        &kp H        &ht RSHFT J  &ht RGUI K  &ht RALT L  &ht RCTRL P
 &kp Z        &kp X       &kp C       &kp V         &kp B        &kp N        &kp M        &kp COMMA   &kp DOT     &kp SLASH
-                                     &lt 1 BSPC    &lt 2 ESC    &lt 4 ENTER  &lt 3 SPACE
+                                     &lt 1 BSPC    &lt 2 ESC    &lt 0 ENTER  &lt 3 SPACE
             >;
         };
 
@@ -134,16 +134,6 @@
 &kp LBKT   &kp N4  &kp N5  &kp N6   &kp RBKT     &none   &kp RSHFT  &kp RGUI  &kp RALT  &kp RCTRL
 &kp BSLH   &kp N1  &kp N2  &kp N3   &kp MINUS    &none   &none      &none     &none     &bootloader
                            &kp SQT  &kp EQUAL    &trans  &trans
-            >;
-        };
-
-        symbols {
-            display-name = "SYMBOL";
-            bindings = <
-&kp LS(TILDE)  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)     &none   &none      &none     &none     &none
-&kp LS(LBRC)   &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(RBRC)     &none   &kp RSHFT  &kp RGUI  &kp RALT  &kp RCTRL
-&kp LS(PIPE)   &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(UNDER)    &none   &none      &none     &none     &bootloader
-                                            &kp LS(DQT)    &kp LS(PLUS)     &trans  &trans
             >;
         };
 
