@@ -84,16 +84,6 @@
 
 
 /**/
-/*         mouse { */
-/*             display-name = "MOUSE"; */
-/*             bindings = < */
-/* &trans          &trans          &mmv MOVE_UP    &trans           &trans    &trans    &trans    &trans  &trans  &trans */
-/* &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans    &trans    &trans  &trans  &trans */
-/* &msc SCRL_DOWN  &trans          &trans          &trans           &trans    &trans    &trans    &trans  &trans  &trans */
-/*                                                 &trans           &trans    &mkp MB2  &mkp MB1 */
-/*             >; */
-/*         }; */
-/**/
 /*         nav { */
 /*             display-name = "NAV"; */
 /*             bindings = < */
@@ -143,6 +133,16 @@
                                      &lt 1 BSPC    &lt 2 ESC    &lt 4 ENTER  &lt 3 SPACE
             >;
         };
+        mouse {
+            display-name = "MOUSE";
+            bindings = <
+&trans          &trans          &mmv MOVE_UP    &trans           &trans    &trans    &trans    &trans  &trans  &trans
+&msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans    &trans    &trans  &trans  &trans
+&msc SCRL_DOWN  &trans          &trans          &trans           &trans    &trans    &trans    &trans  &trans  &trans
+                                                &trans           &trans    &mkp MB2  &mkp MB1
+            >;
+        };
+
 
         windows_layer {
             display-name = "WIN";
