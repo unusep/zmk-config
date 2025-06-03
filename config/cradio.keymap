@@ -85,15 +85,6 @@
 
 /**/
 /**/
-/*         symbols { */
-/*             display-name = "SYMBOL"; */
-/*             bindings = < */
-/* &mt LSHIFT TILDE  &mt LSHIFT N7  &mt LSHIFT N8  &mt LSHIFT N9   &mt LSHIFT N9 N0       &none   &none   &none  &none  &none */
-/* &mt LSHIFT LBKT   &mt LSHIFT N4  &mt LSHIFT N5  &mt LSHIFT N6   &mt LSHIFT N6 RBKT     &none   &none   &none  &none  &none */
-/* &mt LSHIFT BSLH   &mt LSHIFT N1  &mt LSHIFT N2  &mt LSHIFT N3   &mt LSHIFT N3 MINUS    &none   &none   &none  &none  &bootloader */
-/*                                                 &mt LSHIFT SQT  &mt LSHIFT EQUAL       &trans  &trans */
-/*             >; */
-/*         }; */
 /**/
 /*         system { */
 /*             display-name = "SYSTEM"; */
@@ -141,6 +132,16 @@
 &kp LBKT   &kp N4  &kp N5  &kp N6   &kp RBKT     &none   &none   &none  &none  &none
 &kp BSLH   &kp N1  &kp N2  &kp N3   &kp MINUS    &none   &none   &none  &none  &bootloader
                            &kp SQT  &kp EQUAL    &trans  &trans
+            >;
+        };
+
+        symbols {
+            display-name = "SYMBOL";
+            bindings = <
+&mt LSHIFT TILDE  &mt LSHIFT N7  &mt LSHIFT N8  &mt LSHIFT N9   &mt LSHIFT N9 N0       &none   &none   &none  &none  &none
+&mt LSHIFT LBKT   &mt LSHIFT N4  &mt LSHIFT N5  &mt LSHIFT N6   &mt LSHIFT N6 RBKT     &none   &none   &none  &none  &none
+&mt LSHIFT BSLH   &mt LSHIFT N1  &mt LSHIFT N2  &mt LSHIFT N3   &mt LSHIFT N3 MINUS    &none   &none   &none  &none  &bootloader
+                                                &mt LSHIFT SQT  &mt LSHIFT EQUAL       &trans  &trans
             >;
         };
 
