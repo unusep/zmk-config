@@ -82,13 +82,65 @@
     keymap {
         compatible = "zmk,keymap";
 
+
+/**/
+/*         mouse { */
+/*             display-name = "MOUSE"; */
+/*             bindings = < */
+/* &trans          &trans          &mmv MOVE_UP    &trans           &trans    &trans    &trans    &trans  &trans  &trans */
+/* &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans    &trans    &trans  &trans  &trans */
+/* &msc SCRL_DOWN  &trans          &trans          &trans           &trans    &trans    &trans    &trans  &trans  &trans */
+/*                                                 &trans           &trans    &mkp MB2  &mkp MB1 */
+/*             >; */
+/*         }; */
+/**/
+/*         nav { */
+/*             display-name = "NAV"; */
+/*             bindings = < */
+/* &trans       &mt LALT RIGHT  &trans    &trans      &trans           &mt RGUI C  &mt RGUI Z  &trans  &kp ENTER  &trans */
+/* &kp LCTRL    &kp LALT        &kp LGUI  &kp LSHIFT  &trans           &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT  &mt RGUI V */
+/* &bootloader  &trans          &trans    &trans      &mt LALT LEFT    &trans      &trans      &trans  &trans     &trans */
+/*                                        &trans      &trans           &mkp TAB    &trans */
+/*             >; */
+/*         }; */
+/**/
+/*         numbers { */
+/*             display-name = "NUM"; */
+/*             bindings = < */
+/* &kp TILDE  &kp N7  &kp N8  &kp N9   &kp N0       &none   &none   &none  &none  &none */
+/* &kp LBKT   &kp N4  &kp N5  &kp N6   &kp RBKT     &none   &none   &none  &none  &none */
+/* &kp BSLH   &kp N1  &kp N2  &kp N3   &kp MINUS    &none   &none   &none  &none  &bootloader */
+/*                            &kp SQT  &kp EQUAL    &trans  &trans */
+/*             >; */
+/*         }; */
+/**/
+/*         symbols { */
+/*             display-name = "SYMBOL"; */
+/*             bindings = < */
+/* &mt LSHIFT TILDE  &mt LSHIFT N7  &mt LSHIFT N8  &mt LSHIFT N9   &mt LSHIFT N9 N0       &none   &none   &none  &none  &none */
+/* &mt LSHIFT LBKT   &mt LSHIFT N4  &mt LSHIFT N5  &mt LSHIFT N6   &mt LSHIFT N6 RBKT     &none   &none   &none  &none  &none */
+/* &mt LSHIFT BSLH   &mt LSHIFT N1  &mt LSHIFT N2  &mt LSHIFT N3   &mt LSHIFT N3 MINUS    &none   &none   &none  &none  &bootloader */
+/*                                                 &mt LSHIFT SQT  &mt LSHIFT EQUAL       &trans  &trans */
+/*             >; */
+/*         }; */
+/**/
+/*         system { */
+/*             display-name = "SYSTEM"; */
+/*             bindings = < */
+/* &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL_1          &bt BT_SEL 2          &bt BT_SEL 3  &bt BT_SEL_4 */
+/* &trans  &trans  &trans  &trans  &trans    &trans        &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE    &trans */
+/* &trans  &trans  &trans  &trans  &trans    &trans        &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &trans        &trans */
+/*                         &trans  &trans    &trans        &trans */
+/*             >; */
+/*         }; */
+
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-            &kp Q  &kp W       &kp E        &kp R        &kp T         &kp Y      &kp U        &kp I        &kp O       &kp P
-            &kp A  &ht LALT S  &ht LCTRL D  &ht LGUI F   &kp G         &kp H      &ht RGUI J   &ht RCTRL K  &ht RALT L  &kp BSPC
-            &kp Z  &kp X       &kp C        &kp V        &kp B         &kp N      &kp M        &kp COMMA    &kp DOT     &kp ENTER
-            &lt LEF TAB  &kp LSHIFT     &kp SPACE &lt RIG TAB
+&kp Q        &kp W       &kp E       &kp R         &kp T        &kp Y        &kp U        &kp I       &kp O       &kp SEMICOLON
+&ht LCTRL A  &ht LALT S  &ht LGUI D  &ht LSHIFT F  &kp G        &kp H        &ht RSHFT J  &ht RGUI K  &ht RALT L  &ht RCTRL P
+&kp Z        &kp X       &kp C       &kp V         &kp B        &kp N        &kp M        &kp COMMA   &kp DOT     &kp SLASH
+                                     &lt 1 BSPC    &lt 2 ESC    &lt 4 ENTER  &lt 3 SPACE
             >;
         };
 
