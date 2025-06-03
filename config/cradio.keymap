@@ -84,15 +84,6 @@
 
 
 /**/
-/*         nav { */
-/*             display-name = "NAV"; */
-/*             bindings = < */
-/* &trans       &mt LALT RIGHT  &trans    &trans      &trans           &mt RGUI C  &mt RGUI Z  &trans  &kp ENTER  &trans */
-/* &kp LCTRL    &kp LALT        &kp LGUI  &kp LSHIFT  &trans           &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT  &mt RGUI V */
-/* &bootloader  &trans          &trans    &trans      &mt LALT LEFT    &trans      &trans      &trans  &trans     &trans */
-/*                                        &trans      &trans           &mkp TAB    &trans */
-/*             >; */
-/*         }; */
 /**/
 /*         numbers { */
 /*             display-name = "NUM"; */
@@ -143,6 +134,15 @@
             >;
         };
 
+        nav {
+            display-name = "NAV";
+            bindings = <
+&trans       &mt LALT RIGHT  &trans    &trans      &trans           &mt RGUI C  &mt RGUI Z  &trans  &kp ENTER  &trans
+&kp LCTRL    &kp LALT        &kp LGUI  &kp LSHIFT  &trans           &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT  &mt RGUI V
+&bootloader  &trans          &trans    &trans      &mt LALT LEFT    &trans      &trans      &trans  &trans     &trans
+                                       &trans      &trans           &mkp TAB    &trans
+            >;
+        };
 
         windows_layer {
             display-name = "WIN";
