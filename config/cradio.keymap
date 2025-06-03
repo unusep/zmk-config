@@ -69,19 +69,12 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <2 3>;
+            if-layers = <2 1>;
             then-layer = <5>;
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        magic {
-            bindings = <&mo 5>;
-            key-positions = <30 31>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -92,7 +85,7 @@
 &kp Q        &kp W       &kp E       &kp R         &kp T        &kp Y        &kp U        &kp I       &kp O       &kp SEMICOLON
 &ht LCTRL A  &ht LALT S  &ht LGUI D  &ht LSHIFT F  &kp G        &kp H        &ht RSHFT J  &ht RGUI K  &ht RALT L  &ht RCTRL P
 &kp Z        &kp X       &kp C       &kp V         &kp B        &kp N        &kp M        &kp COMMA   &kp DOT     &kp SLASH
-                                     &lt 1 BSPC    &lt 2 ESC    &lt 0 ENTER  &lt 3 SPACE
+                                     &lt 1 BSPC    &lt 2 ESC    &lt 4 ENTER  &lt 3 SPACE
             >;
         };
 
@@ -102,7 +95,7 @@
 &trans          &trans          &mmv MOVE_UP    &trans           &trans    &trans    &trans    &trans  &trans  &trans
 &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans    &trans    &trans  &trans  &trans
 &msc SCRL_DOWN  &trans          &trans          &trans           &trans    &trans    &trans    &trans  &trans  &trans
-                                                &trans           &trans    &mkp MB2  &mkp MB1
+                                                &trans           &mo 2     &mkp MB2  &mkp MB1
             >;
         };
 
@@ -112,7 +105,7 @@
 &trans       &mt LALT RIGHT  &trans    &trans      &trans           &mt RGUI C  &mt RGUI Z  &trans  &kp ENTER  &trans
 &kp LCTRL    &kp LALT        &kp LGUI  &kp LSHIFT  &trans           &kp LEFT    &kp DOWN    &kp UP  &kp RIGHT  &mt RGUI V
 &bootloader  &trans          &trans    &trans      &mt LALT LEFT    &trans      &trans      &trans  &trans     &trans
-                                       &trans      &trans           &mkp TAB    &trans
+                                       &mo 1       &trans           &mkp TAB    &trans
             >;
         };
 
