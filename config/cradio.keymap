@@ -6,9 +6,10 @@
 
 // NOTE: Use the `#define` settings below to customize this keymap!
 // For example, here are the main optional features you can enable:
-#define DIFFICULTY_LEVEL  4 // 0:custom, 1:easy -> 5:hard (see below)
-// TIP: Add more setting overrides here instead of editing them below.
 
+#define DIFFICULTY_LEVEL  4 // 0:custom, 1:easy -> 5:hard (see below)
+
+// TIP: Add more setting overrides here instead of editing them below.
 //////////////////////////////////////////////////////////////////////////////
 //
 // Advanced Home Row Mods (HRM) Example based on
@@ -16,7 +17,6 @@
 // - https://github.com/sunaku/glove80-keymaps
 //
 //////////////////////////////////////////////////////////////////////////////
-
 //
 // DIFFICULTY_LEVEL specifies your level of expertise with this keymap.
 // It's meant to help newcomers gradually work their way up to mastery.
@@ -29,13 +29,20 @@
 // #define DIFFICULTY_LEVEL 4 // faster (200ms)
 // #define DIFFICULTY_LEVEL 5 // expert (100ms)
 //
+
 #if defined(DIFFICULTY_LEVEL) && DIFFICULTY_LEVEL > 0
+
 #define DIFFICULTY_THRESHOLD ((6-DIFFICULTY_LEVEL)*100)
+
 #ifndef HOMEY_HOLDING_TIME
+
 #define HOMEY_HOLDING_TIME DIFFICULTY_THRESHOLD
+
 #endif
 #ifndef INDEX_HOLDING_TIME
+
 #define INDEX_HOLDING_TIME DIFFICULTY_THRESHOLD
+
 #endif
 #endif
     //////////////////////////////////////////////////////////////////////////
@@ -115,227 +122,349 @@
     #define INDEX_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
     #endif
 
-    //
-    // Glove80 key positions index for positional hold-tap
-    // - https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248
-    // - https://media.discordapp.net/attachments/937645688244826154/1066713913133121556/image.png
-    //
-    // |------------------------|------------------------|
-    // | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |
-    // |                        |                        |
-    // |  0  1  2  3  4         |          5  6  7  8  9 |
-    // | 10 11 12 13 14 15      |      16 17 18 19 20 21 |
-    // | 22 23 24 25 26 27      |      28 29 30 31 32 33 |
-    // | 34 35 36 37 38 39      |      40 41 42 43 44 45 |
-    // | 46 47 48 49 50 51      |      58 59 60 61 62 63 |
-    // | 64 65 66 67 68         |         75 76 77 78 79 |
-    // |                69 52   |   57 74                |
-    // |                 70 53  |  56 73                 |
-    // |                  71 54 | 55 72                  |
-    // |------------------------|------------------------|
-    //
-    #define LEFT_HAND_KEYS      \
+//
+// Glove80 key positions index for positional hold-tap
+// - https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248
+// - https://media.discordapp.net/attachments/937645688244826154/1066713913133121556/image.png
+//
+// |------------------------|------------------------|
+// | LEFT_HAND_KEYS         |        RIGHT_HAND_KEYS |
+// |                        |                        |
+// |  0  1  2  3  4         |          5  6  7  8  9 |
+// | 10 11 12 13 14 15      |      16 17 18 19 20 21 |
+// | 22 23 24 25 26 27      |      28 29 30 31 32 33 |
+// | 34 35 36 37 38 39      |      40 41 42 43 44 45 |
+// | 46 47 48 49 50 51      |      58 59 60 61 62 63 |
+// | 64 65 66 67 68         |         75 76 77 78 79 |
+// |                69 52   |   57 74                |
+// |                 70 53  |  56 73                 |
+// |                  71 54 | 55 72                  |
+// |------------------------|------------------------|
+//
+
+#define LEFT_HAND_KEYS      \
           0  1  2  3  4         \
          10 11 12 13 14 15      \
          22 23 24 25 26 27      \
          34 35 36 37 38 39      \
          46 47 48 49 50 51      \
          64 65 66 67 68
-    #define RIGHT_HAND_KEYS     \
+#define RIGHT_HAND_KEYS     \
                                            5  6  7  8  9 \
                                        16 17 18 19 20 21 \
                                        28 29 30 31 32 33 \
                                        40 41 42 43 44 45 \
                                        58 59 60 61 62 63 \
                                           75 76 77 78 79
-    #define THUMB_KEYS          \
+#define THUMB_KEYS          \
                         69 52       57 74                \
                          70 53     56 73                 \
                           71 54   55 72
 
-    //
-    // Home row mods with per-finger configuration settings
-    //
-    #ifndef PINKY_HOLDING_TYPE
-    #define PINKY_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
+//
+// Home row mods with per-finger configuration settings
+//
+
+#ifndef PINKY_HOLDING_TYPE
+
+#define PINKY_HOLDING_TYPE HOMEY_HOLDING_TYPE
+
+#endif
     #ifndef PINKY_HOLDING_TIME
-    #define PINKY_HOLDING_TIME HOMEY_HOLDING_TIME
-    #endif
+
+#define PINKY_HOLDING_TIME HOMEY_HOLDING_TIME
+
+#endif
     #ifndef PINKY_STREAK_DECAY
-    #define PINKY_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
+
+#define PINKY_STREAK_DECAY HOMEY_STREAK_DECAY
+
+#endif
     #ifndef PINKY_REPEAT_DECAY
-    #define PINKY_REPEAT_DECAY HOMEY_REPEAT_DECAY
-    #endif
+
+#define PINKY_REPEAT_DECAY HOMEY_REPEAT_DECAY
+
+#endif
     #ifndef RING1_HOLDING_TYPE
-    #define RING1_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
+
+#define RING1_HOLDING_TYPE HOMEY_HOLDING_TYPE
+
+#endif
     #ifndef RING1_HOLDING_TIME
-    #define RING1_HOLDING_TIME HOMEY_HOLDING_TIME
-    #endif
+
+#define RING1_HOLDING_TIME HOMEY_HOLDING_TIME
+
+#endif
     #ifndef RING1_STREAK_DECAY
-    #define RING1_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
+
+#define RING1_STREAK_DECAY HOMEY_STREAK_DECAY
+
+#endif
     #ifndef RING1_REPEAT_DECAY
-    #define RING1_REPEAT_DECAY HOMEY_REPEAT_DECAY
-    #endif
+
+#define RING1_REPEAT_DECAY HOMEY_REPEAT_DECAY
+
+#endif
     #ifndef RING2_HOLDING_TYPE
-    #define RING2_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
+
+#define RING2_HOLDING_TYPE HOMEY_HOLDING_TYPE
+
+#endif
     #ifndef RING2_HOLDING_TIME
-    #define RING2_HOLDING_TIME HOMEY_HOLDING_TIME
-    #endif
+
+#define RING2_HOLDING_TIME HOMEY_HOLDING_TIME
+
+#endif
     #ifndef RING2_STREAK_DECAY
-    #define RING2_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
+
+#define RING2_STREAK_DECAY HOMEY_STREAK_DECAY
+
+#endif
     #ifndef RING2_REPEAT_DECAY
-    #define RING2_REPEAT_DECAY HOMEY_REPEAT_DECAY
-    #endif
+
+#define RING2_REPEAT_DECAY HOMEY_REPEAT_DECAY
+
+#endif
     #ifndef MIDDY_HOLDING_TYPE
-    #define MIDDY_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
+
+#define MIDDY_HOLDING_TYPE HOMEY_HOLDING_TYPE
+
+#endif
     #ifndef MIDDY_HOLDING_TIME
-    #define MIDDY_HOLDING_TIME HOMEY_HOLDING_TIME
-    #endif
+
+#define MIDDY_HOLDING_TIME HOMEY_HOLDING_TIME
+
+#endif
     #ifndef MIDDY_STREAK_DECAY
-    #define MIDDY_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
+
+#define MIDDY_STREAK_DECAY HOMEY_STREAK_DECAY
+
+#endif
     #ifndef MIDDY_REPEAT_DECAY
-    #define MIDDY_REPEAT_DECAY HOMEY_REPEAT_DECAY
-    #endif
+
+#define MIDDY_REPEAT_DECAY HOMEY_REPEAT_DECAY
+
+#endif
     #ifndef INDEX_HOLDING_TYPE
-    #define INDEX_HOLDING_TYPE HOMEY_HOLDING_TYPE
-    #endif
+
+#define INDEX_HOLDING_TYPE HOMEY_HOLDING_TYPE
+
+#endif
     #ifndef INDEX_HOLDING_TIME
-    #define INDEX_HOLDING_TIME HOMEY_HOLDING_TIME
-    #endif
+
+#define INDEX_HOLDING_TIME HOMEY_HOLDING_TIME
+
+#endif
     #ifndef INDEX_STREAK_DECAY
-    #define INDEX_STREAK_DECAY HOMEY_STREAK_DECAY
-    #endif
+
+#define INDEX_STREAK_DECAY HOMEY_STREAK_DECAY
+
+#endif
     #ifndef INDEX_REPEAT_DECAY
-    #define INDEX_REPEAT_DECAY HOMEY_REPEAT_DECAY
-    #endif
+
+#define INDEX_REPEAT_DECAY HOMEY_REPEAT_DECAY
+
+#endif
     #ifndef LEFT_PINKY_HOLDING_TYPE
-    #define LEFT_PINKY_HOLDING_TYPE PINKY_HOLDING_TYPE
-    #endif
+
+#define LEFT_PINKY_HOLDING_TYPE PINKY_HOLDING_TYPE
+
+#endif
     #ifndef LEFT_PINKY_HOLDING_TIME
-    #define LEFT_PINKY_HOLDING_TIME PINKY_HOLDING_TIME
-    #endif
+
+#define LEFT_PINKY_HOLDING_TIME PINKY_HOLDING_TIME
+
+#endif
     #ifndef LEFT_PINKY_STREAK_DECAY
-    #define LEFT_PINKY_STREAK_DECAY PINKY_STREAK_DECAY
-    #endif
+
+#define LEFT_PINKY_STREAK_DECAY PINKY_STREAK_DECAY
+
+#endif
     #ifndef LEFT_PINKY_REPEAT_DECAY
-    #define LEFT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
-    #endif
+
+#define LEFT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
+
+#endif
     #ifndef RIGHT_PINKY_HOLDING_TYPE
-    #define RIGHT_PINKY_HOLDING_TYPE PINKY_HOLDING_TYPE
-    #endif
+
+#define RIGHT_PINKY_HOLDING_TYPE PINKY_HOLDING_TYPE
+
+#endif
     #ifndef RIGHT_PINKY_HOLDING_TIME
-    #define RIGHT_PINKY_HOLDING_TIME PINKY_HOLDING_TIME
-    #endif
+
+#define RIGHT_PINKY_HOLDING_TIME PINKY_HOLDING_TIME
+
+#endif
     #ifndef RIGHT_PINKY_STREAK_DECAY
-    #define RIGHT_PINKY_STREAK_DECAY PINKY_STREAK_DECAY
-    #endif
+
+#define RIGHT_PINKY_STREAK_DECAY PINKY_STREAK_DECAY
+
+#endif
     #ifndef RIGHT_PINKY_REPEAT_DECAY
-    #define RIGHT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
-    #endif
+
+#define RIGHT_PINKY_REPEAT_DECAY PINKY_REPEAT_DECAY
+
+#endif
     #ifndef LEFT_RING1_HOLDING_TYPE
-    #define LEFT_RING1_HOLDING_TYPE RING1_HOLDING_TYPE
-    #endif
+
+#define LEFT_RING1_HOLDING_TYPE RING1_HOLDING_TYPE
+
+#endif
     #ifndef LEFT_RING1_HOLDING_TIME
-    #define LEFT_RING1_HOLDING_TIME RING1_HOLDING_TIME
-    #endif
+
+#define LEFT_RING1_HOLDING_TIME RING1_HOLDING_TIME
+
+#endif
     #ifndef LEFT_RING1_STREAK_DECAY
-    #define LEFT_RING1_STREAK_DECAY RING1_STREAK_DECAY
-    #endif
+
+#define LEFT_RING1_STREAK_DECAY RING1_STREAK_DECAY
+
+#endif
     #ifndef LEFT_RING1_REPEAT_DECAY
-    #define LEFT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
-    #endif
+
+#define LEFT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
+
+#endif
     #ifndef RIGHT_INDEX_HOLDING_TYPE
-    #define RIGHT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
-    #endif
+
+#define RIGHT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
+
+#endif
     #ifndef RIGHT_INDEX_HOLDING_TIME
-    #define RIGHT_INDEX_HOLDING_TIME INDEX_HOLDING_TIME
-    #endif
+
+#define RIGHT_INDEX_HOLDING_TIME INDEX_HOLDING_TIME
+
+#endif
     #ifndef RIGHT_INDEX_STREAK_DECAY
-    #define RIGHT_INDEX_STREAK_DECAY INDEX_STREAK_DECAY
-    #endif
+
+#define RIGHT_INDEX_STREAK_DECAY INDEX_STREAK_DECAY
+
+#endif
     #ifndef RIGHT_INDEX_REPEAT_DECAY
-    #define RIGHT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
-    #endif
+
+#define RIGHT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
+
+#endif
     #ifndef LEFT_INDEX_HOLDING_TYPE
-    #define LEFT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
-    #endif
+
+#define LEFT_INDEX_HOLDING_TYPE INDEX_HOLDING_TYPE
+
+#endif
     #ifndef LEFT_INDEX_HOLDING_TIME
-    #define LEFT_INDEX_HOLDING_TIME INDEX_HOLDING_TIME
-    #endif
+
+#define LEFT_INDEX_HOLDING_TIME INDEX_HOLDING_TIME
+
+#endif
     #ifndef LEFT_INDEX_STREAK_DECAY
-    #define LEFT_INDEX_STREAK_DECAY INDEX_STREAK_DECAY
-    #endif
+
+#define LEFT_INDEX_STREAK_DECAY INDEX_STREAK_DECAY
+
+#endif
     #ifndef LEFT_INDEX_REPEAT_DECAY
-    #define LEFT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
-    #endif
+
+#define LEFT_INDEX_REPEAT_DECAY INDEX_REPEAT_DECAY
+
+#endif
     #ifndef RIGHT_MIDDY_HOLDING_TYPE
-    #define RIGHT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
-    #endif
+
+#define RIGHT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
+
+#endif
     #ifndef RIGHT_MIDDY_HOLDING_TIME
-    #define RIGHT_MIDDY_HOLDING_TIME MIDDY_HOLDING_TIME
-    #endif
+
+#define RIGHT_MIDDY_HOLDING_TIME MIDDY_HOLDING_TIME
+
+#endif
     #ifndef RIGHT_MIDDY_STREAK_DECAY
-    #define RIGHT_MIDDY_STREAK_DECAY MIDDY_STREAK_DECAY
-    #endif
+
+#define RIGHT_MIDDY_STREAK_DECAY MIDDY_STREAK_DECAY
+
+#endif
     #ifndef RIGHT_MIDDY_REPEAT_DECAY
-    #define RIGHT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
-    #endif
+
+#define RIGHT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
+
+#endif
     #ifndef LEFT_MIDDY_HOLDING_TYPE
-    #define LEFT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
-    #endif
+
+#define LEFT_MIDDY_HOLDING_TYPE MIDDY_HOLDING_TYPE
+
+#endif
     #ifndef LEFT_MIDDY_HOLDING_TIME
-    #define LEFT_MIDDY_HOLDING_TIME MIDDY_HOLDING_TIME
-    #endif
+
+#define LEFT_MIDDY_HOLDING_TIME MIDDY_HOLDING_TIME
+
+#endif
     #ifndef LEFT_MIDDY_STREAK_DECAY
-    #define LEFT_MIDDY_STREAK_DECAY MIDDY_STREAK_DECAY
-    #endif
+
+#define LEFT_MIDDY_STREAK_DECAY MIDDY_STREAK_DECAY
+
+#endif
     #ifndef LEFT_MIDDY_REPEAT_DECAY
-    #define LEFT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
-    #endif
+
+#define LEFT_MIDDY_REPEAT_DECAY MIDDY_REPEAT_DECAY
+
+#endif
     #ifndef RIGHT_RING2_HOLDING_TYPE
-    #define RIGHT_RING2_HOLDING_TYPE RING2_HOLDING_TYPE
-    #endif
+
+#define RIGHT_RING2_HOLDING_TYPE RING2_HOLDING_TYPE
+
+#endif
     #ifndef RIGHT_RING2_HOLDING_TIME
-    #define RIGHT_RING2_HOLDING_TIME RING2_HOLDING_TIME
-    #endif
+
+#define RIGHT_RING2_HOLDING_TIME RING2_HOLDING_TIME
+
+#endif
     #ifndef RIGHT_RING2_STREAK_DECAY
-    #define RIGHT_RING2_STREAK_DECAY RING2_STREAK_DECAY
-    #endif
+
+#define RIGHT_RING2_STREAK_DECAY RING2_STREAK_DECAY
+
+#endif
     #ifndef RIGHT_RING2_REPEAT_DECAY
-    #define RIGHT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
-    #endif
+
+#define RIGHT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
+
+#endif
     #ifndef LEFT_RING2_HOLDING_TYPE
-    #define LEFT_RING2_HOLDING_TYPE RING2_HOLDING_TYPE
-    #endif
+
+#define LEFT_RING2_HOLDING_TYPE RING2_HOLDING_TYPE
+
+#endif
     #ifndef LEFT_RING2_HOLDING_TIME
-    #define LEFT_RING2_HOLDING_TIME RING2_HOLDING_TIME
-    #endif
+
+#define LEFT_RING2_HOLDING_TIME RING2_HOLDING_TIME
+
+#endif
     #ifndef LEFT_RING2_STREAK_DECAY
-    #define LEFT_RING2_STREAK_DECAY RING2_STREAK_DECAY
-    #endif
+
+#define LEFT_RING2_STREAK_DECAY RING2_STREAK_DECAY
+
+#endif
     #ifndef LEFT_RING2_REPEAT_DECAY
-    #define LEFT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
-    #endif
+
+#define LEFT_RING2_REPEAT_DECAY RING2_REPEAT_DECAY
+
+#endif
     #ifndef RIGHT_RING1_HOLDING_TYPE
-    #define RIGHT_RING1_HOLDING_TYPE RING1_HOLDING_TYPE
-    #endif
+
+#define RIGHT_RING1_HOLDING_TYPE RING1_HOLDING_TYPE
+
+#endif
     #ifndef RIGHT_RING1_HOLDING_TIME
-    #define RIGHT_RING1_HOLDING_TIME RING1_HOLDING_TIME
-    #endif
+
+#define RIGHT_RING1_HOLDING_TIME RING1_HOLDING_TIME
+
+#endif
     #ifndef RIGHT_RING1_STREAK_DECAY
-    #define RIGHT_RING1_STREAK_DECAY RING1_STREAK_DECAY
-    #endif
+
+#define RIGHT_RING1_STREAK_DECAY RING1_STREAK_DECAY
+
+#endif
     #ifndef RIGHT_RING1_REPEAT_DECAY
-    #define RIGHT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
-    #endif
+
+#define RIGHT_RING1_REPEAT_DECAY RING1_REPEAT_DECAY
+
+#endif
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -376,7 +505,8 @@
     behaviors {
         left_pinky: homey_left_pinky {
             compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_PINKY_HOLDING_TYPE;
+            flavor =
+            LEFT_PINKY_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
@@ -385,9 +515,11 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
         right_pinky: homey_right_pinky {
             compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_PINKY_HOLDING_TYPE;
+            flavor =
+            RIGHT_PINKY_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
@@ -396,9 +528,11 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
         left_ring1: homey_left_ring1 {
             compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_RING1_HOLDING_TYPE;
+            flavor =
+            LEFT_RING1_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_RING1_HOLDING_TIME>;
@@ -407,9 +541,11 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
         right_ring1: homey_right_ring1 {
             compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_RING1_HOLDING_TYPE;
+            flavor =
+            RIGHT_RING1_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_RING1_HOLDING_TIME>;
@@ -418,9 +554,11 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
         left_ring2: homey_left_ring2 {
             compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_RING2_HOLDING_TYPE;
+            flavor =
+            LEFT_RING2_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_RING2_HOLDING_TIME>;
@@ -429,9 +567,11 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
         right_ring2: homey_right_ring2 {
             compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_RING2_HOLDING_TYPE;
+            flavor =
+            RIGHT_RING2_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_RING2_HOLDING_TIME>;
@@ -440,9 +580,11 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
         left_middy: homey_left_middy {
             compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_MIDDY_HOLDING_TYPE;
+            flavor =
+            LEFT_MIDDY_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_MIDDY_HOLDING_TIME>;
@@ -451,9 +593,11 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
         right_middy: homey_right_middy {
             compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_MIDDY_HOLDING_TYPE;
+            flavor =
+            RIGHT_MIDDY_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_MIDDY_HOLDING_TIME>;
@@ -462,9 +606,11 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
         left_index: homey_left_index {
             compatible = "zmk,behavior-hold-tap";
-            flavor = LEFT_INDEX_HOLDING_TYPE;
+            flavor =
+            LEFT_INDEX_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <LEFT_INDEX_HOLDING_TIME>;
@@ -473,9 +619,11 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
         right_index: homey_right_index {
             compatible = "zmk,behavior-hold-tap";
-            flavor = RIGHT_INDEX_HOLDING_TYPE;
+            flavor =
+            RIGHT_INDEX_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <RIGHT_INDEX_HOLDING_TIME>;
@@ -484,6 +632,7 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
         ht: hold_tap {
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
@@ -525,10 +674,10 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-&kp Q        &kp W       &kp E       &kp R         &kp T              &kp Y        &kp U        &kp I       &kp O       &kp SEMICOLON
-              &left_pinky LCTRL A  &left_ring1 LALT S  &left_middy LGUI D  &left_index LSHFT F   &kp G                                                                                      &kp H  &right_index RSFT J  &right_middy RGUI K  &right_ring1 RALT L  &right_pinky RCTRL P 
-&kp Z        &kp X       &kp C       &kp V         &kp B              &kp N        &kp M        &kp COMMA   &kp DOT     &kp SLASH
-                                     &lt 2 ESCAPE  &lt 1 BACKSPACE    &lt 3 SPACE  &lt 4 ENTER
+&kp Q                &kp W               &kp E               &kp R                &kp T              &kp Y        &kp U                 &kp I                &kp O                &kp SEMICOLON
+&left_pinky LCTRL A  &left_ring1 LALT S  &left_middy LGUI D  &left_index LSHFT F  &kp G              &kp H        &right_index RSHFT J  &right_middy RGUI K  &right_ring1 RALT L  &right_pinky RCTRL P
+&kp Z                &kp X               &kp C               &kp V                &kp B              &kp N        &kp M                 &kp COMMA            &kp DOT              &kp SLASH
+                                                             &lt 2 ESCAPE         &lt 1 BACKSPACE    &lt 3 SPACE  &lt 4 ENTER
             >;
         };
 
@@ -545,10 +694,10 @@
         nav {
             display-name = "NAV";
             bindings = <
-&trans       &kp LA(RIGHT)  &trans    &trans      &trans                &kp RG(C)  &kp RG(Z)  &trans  &kp ENTER  &trans
-  &kp LCTRL  &left_ring1 LALT LEFT  &left_middy LGUI DOWN        &left_index LSHFT RIGHT         &none                                                    &kp LEFT  &right_index RSHFT DOWN  &right_middy RGUI UP  &right_ring1 RALT RIGHT  &kp RCTRL  
-&bootloader  &trans         &trans    &trans      &kp LA(LEFT_ARROW)    &trans     &trans     &trans  &trans     &trans
-                                      &mo 1       &mo 1                 &mkp TAB   &kp TAB
+&trans       &kp LA(RIGHT)          &trans                 &trans                   &trans                &kp RG(C)  &kp RG(Z)                &trans                &kp ENTER                &trans
+&kp LCTRL    &left_ring1 LALT LEFT  &left_middy LGUI DOWN  &left_index LSHFT RIGHT  &none                 &kp LEFT   &right_index RSHFT DOWN  &right_middy RGUI UP  &right_ring1 RALT RIGHT  &kp RCTRL
+&bootloader  &trans                 &trans                 &trans                   &kp LA(LEFT_ARROW)    &trans     &trans                   &trans                &trans                   &trans
+                                                           &mo 1                    &mo 1                 &mkp TAB   &kp TAB
             >;
         };
 
