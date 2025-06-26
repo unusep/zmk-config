@@ -526,7 +526,7 @@
             display-name = "DEFAULT";
             bindings = <
 &kp Q        &kp W       &kp E       &kp R         &kp T              &kp Y        &kp U        &kp I       &kp O       &kp SEMICOLON
-&ht LCTRL A  &ht LALT S  &ht LGUI D  &ht LSHIFT F  &kp G              &kp H        &ht RSHFT J  &ht RGUI K  &ht RALT L  &ht RCTRL P
+              &left_pinky LCTRL A  &left_ring1 LALT S  &left_middy LGUI D  &left_index LSHFT F   &kp G                                                                                      &kp H  &right_index RSFT J  &right_middy RGUI K  &right_ring1 RALT L  &right_pinky RCTRL P 
 &kp Z        &kp X       &kp C       &kp V         &kp B              &kp N        &kp M        &kp COMMA   &kp DOT     &kp SLASH
                                      &lt 2 ESCAPE  &lt 1 BACKSPACE    &lt 3 SPACE  &lt 4 ENTER
             >;
@@ -546,7 +546,7 @@
             display-name = "NAV";
             bindings = <
 &trans       &kp LA(RIGHT)  &trans    &trans      &trans                &kp RG(C)  &kp RG(Z)  &trans  &kp ENTER  &trans
-&kp LCTRL    &kp LALT       &kp LGUI  &kp LSHIFT  &trans                &kp LEFT   &kp DOWN   &kp UP  &kp RIGHT  &mt RGUI V
+  &kp LCTRL  &left_ring1 LALT LEFT  &left_middy LGUI DOWN        &left_index LSHFT RIGHT         &none                                                    &kp LEFT  &right_index RSHFT DOWN  &right_middy RGUI UP  &right_ring1 RALT RIGHT  &kp RCTRL  
 &bootloader  &trans         &trans    &trans      &kp LA(LEFT_ARROW)    &trans     &trans     &trans  &trans     &trans
                                       &mo 1       &mo 1                 &mkp TAB   &kp TAB
             >;
